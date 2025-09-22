@@ -68,7 +68,7 @@ def search_prompt(question=None):
 
     # Initialize the LLM
     model = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash-lite",
+        model=os.getenv("GOOGLE_MODEL"),
         api_key=os.getenv("GOOGLE_API_KEY"),
         temperature=0.5,
     )
